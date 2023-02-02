@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Encyclopedia</title>
+</head>
+<body>
+  <form>
+    <textarea id="term-definition" rows="4" cols="50"></textarea>
+    <br>
+    <button type="button" onclick="performOperation()">Perform Operations</button>
+  </form>
+  <script>
+    let encyclopedia = {};
+
+    function performOperation() {
+        let termDefinition = document.getElementById("term-definition").value;
+        let definition = termDefinition.split(":");
+        let term = definition[0] && definition[0].trim();
+        let meaning = definition[1] && definition[1].trim();
+
+        if (term in encyclopedia) {
+          alert(`The meaning of "${term}" is "${encyclopedia[term]}"`);
+        } else {
+          encyclopedia[term] = meaning;
+          alert(`"${term}" has been added to the encyclopedia with the meaning "${meaning}"`);
+        }
+    }
+
+    window.addEventListener("load", function() {
+    });
+</script>
+  
+</body>
+</html>

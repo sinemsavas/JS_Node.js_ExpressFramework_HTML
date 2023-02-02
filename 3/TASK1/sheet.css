@@ -1,0 +1,80 @@
+.azure {
+background-color: cyan;
+}
+
+@keyframes titlecolor{
+ 0%{color:red;}
+ 50%{color:blue;}
+ 100%{color:red;}
+  
+}
+
+aside  {
+float:right;
+width: 50%;
+border-style: groove;
+animation: titlecolor 3s infinite;
+}
+
+footer {
+text-align:center;
+border: solid;
+
+}      
+
+header {
+text-align:center;
+border: solid;
+border-color: grey;
+
+
+}   
+ 
+main { 
+/*float:left;*/
+width: 40%;
+border-style: groove;
+
+
+}
+
+nav {
+border: solid;
+text-align:center;
+/*shrink the margin*/
+margin-left: 5%;
+margin-right: 5%;
+}
+
+nav ul { /*dots*/
+list-style-type: none;
+}
+
+nav li { 
+display: inline;
+}
+
+@media screen and (max-width:600px){
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    nav{
+        width: 100%;
+        text-align: center;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    aside{
+        width: 100%;
+        text-align: center;
+    }
+    main{
+        width: 100%;
+        text-align: center;
+    }
+    footer{
+        width: 100%;
+        text-align: center;
+    }
+  }
